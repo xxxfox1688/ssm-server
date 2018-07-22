@@ -163,16 +163,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="tree" id="menu_base">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
+        <li class="active treeview" id="menu_title1">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
+          <ul class="treeview-menu" id="menu_1">
             <li class="active" onclick="getContent()"><a><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>

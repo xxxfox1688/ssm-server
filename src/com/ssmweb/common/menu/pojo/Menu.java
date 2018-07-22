@@ -10,7 +10,10 @@ import javax.persistence.Id;
 public class Menu {
 
 	private int id;
+	private int cd_dj;
+	private int sjcd_id;
 	private String menu_name;
+	private String menu_jc;
 	private String menu_url;
 	private String yx_bz;
 	private String xy_bz;
@@ -60,6 +63,24 @@ public class Menu {
 	}
 	public void setCz_sj(Date cz_sj) {
 		this.cz_sj = cz_sj;
+	}
+	public int getCd_dj() {
+		return cd_dj;
+	}
+	public void setCd_dj(int cd_dj) {
+		this.cd_dj = cd_dj;
+	}
+	public int getSjcd_id() {
+		return sjcd_id;
+	}
+	public void setSjcd_id(int sjcd_id) {
+		this.sjcd_id = sjcd_id;
+	}
+	public String getMenu_jc() {
+		return menu_jc;
+	}
+	public void setMenu_jc(String menu_jc) {
+		this.menu_jc = menu_jc;
 	}
 	
 	

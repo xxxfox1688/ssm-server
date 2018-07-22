@@ -1,6 +1,7 @@
 package com.ssmweb.common.menu.control;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -22,9 +23,10 @@ public class MenuController {
 	    
 		@ResponseBody
 	    @RequestMapping(value="/menuxx",method={RequestMethod.GET,RequestMethod.POST})
-	    public void getAllMenu(){
+	    public List<Menu> getAllMenu(){
 	        List<Menu> menu = menuService.getAllMenu();
 	        System.out.println("menu²Ëµ¥£º"+menu);
+	        return menu;
 	    }
 
 		public IMenuService getMenuService() {
