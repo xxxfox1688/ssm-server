@@ -18,6 +18,10 @@ public class MenuServiceImpl implements IMenuService {
 	public List<Menu> getAllMenu() {
         return menuDao.getAllMenu();
     }
+	@Override
+	public List<Menu> getAllParentMenu() {
+		return menuDao.getAllParentMenu();
+	}
 
 	public IMenuDao getMenuDao() {
 		return menuDao;

@@ -5,5 +5,9 @@
     <select id="getAllMenu" resultType="com.ssmweb.common.menu.pojo.Menu">
         select * from model_menu
     </select>
+
+    <select id="getAllParentMenu" resultType="com.ssmweb.common.menu.pojo.Menu">
+        select * from model_menu where cd_dj='1'
+    </select>
     
 </mapper>

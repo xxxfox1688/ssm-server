@@ -26,4 +26,9 @@ public class MenuDaoImpl  extends SqlSessionDaoSupport implements IMenuDao{
 		List<Menu> users = this.getSqlSession().selectList("getAllMenu");
 		return users;
 	}
+	@Override
+	public List<Menu> getAllParentMenu() {
+		List<Menu> users = this.getSqlSession().selectList("getAllParentMenu");
+		return users;
+	}
 }

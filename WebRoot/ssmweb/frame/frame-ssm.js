@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	//左侧栏菜单展示
 	$.ajax({ 
-		url: $("#basePath").val()+"menuxx.do", 
+		url: $("#basePath").val()+"menu/getAllMenu.do", 
 		context: document.body, 
 		type: 'POST',
 		success: function(result){
@@ -29,7 +29,7 @@ $(document).ready(function(){
         	var option = "";
         	//子级菜单
 			if (result[i].cd_dj=='2') {
-				var option = "<li onclick='getContent("+result[i].menu_url+")'><a><i class='fa fa-circle-o'></i> "+result[i].menu_name+"</a></li>";
+				var option = '<li onclick="getContent(\''+result[i].menu_url+'\')"><a><i class="fa fa-circle-o"></i> '+result[i].menu_name+'</a></li>';
 				for (var j = 0; j < result.length; j++) {
 					if(result[j].id==result[i].sjcd_id){
 						previous_id = result[j].menu_jc+"_ul";
@@ -45,8 +45,16 @@ $(document).ready(function(){
     }); 
 
 function changeFrameSize(){
-	var h = document.body.clientHeight;
-	var w = document.body.clientWidth;
+	var h = $("#content-body-div").height();
+	var w = $("#content-body-section").width();
 	$("#content-body").height(h+"px");
 	$("#content-body").width(w+"px");
+}
+
+//通过菜单获取右侧窗体内容
+function getContent(o){
+	$("#content-body").attr("src",$("#basePath").val()+"menu/rightForm.do?rightForm_name="+o);
+	$("#content-body").click(function(){
+	     parent.location.reload();
+	});
 }

@@ -200,10 +200,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
   <!-- 框架体 -->
-  <div class="content-wrapper">
-  <iframe id="content-body" name="content-body" frameborder="0" src="<%=basePath%>test-body.do" onload="changeFrameSize()"
-  marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true"></iframe>
-    
+  <div class="content-wrapper" id="content-body-div">
+  <section class="content" id="content-body-section">
+  <iframe id="content-body" name="content-body" frameborder="0" src="<%=basePath%>test-body.do" onload="changeFrameSize()" method="get"  style="padding-right: 15px;"
+  marginwidth="0" marginheight="0"  allowtransparency="true" scrolling="no" allowfullscreen="true"></iframe>
+    </section>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
