@@ -6,4 +6,8 @@
         select * from qrtz_user
     </select>
     
+    <select id="getUserByName" parameterType="java.util.Map" resultType="com.ssmweb.user.pojo.User">
+        select * from qrtz_user where user_name = #{user_name,jdbcType=VARCHAR}
+    </select>
+    
 </mapper>

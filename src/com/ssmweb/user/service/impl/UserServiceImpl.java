@@ -1,6 +1,7 @@
 package com.ssmweb.user.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -17,9 +18,12 @@ public class UserServiceImpl implements IUserService {
 	
 	@Override
     public List<User> getAllUser() {
-        // TODO Auto-generated method stub
         return userDao.getAllUser();
     }
+	@Override
+	public List<User> getUserByName(Map map) {
+		return userDao.getUserByName(map);
+	}
 
 	public IUserDao getUserDao() {
 		return userDao;

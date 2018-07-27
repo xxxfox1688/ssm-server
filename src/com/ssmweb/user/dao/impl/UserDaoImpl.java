@@ -1,6 +1,7 @@
 package com.ssmweb.user.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -24,6 +25,13 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements IUserDao {
 	@Override
 	public List<User> getAllUser() {
 		List<User> users = this.getSqlSession().selectList("getAllUser");
+		return users;
+	}
+	
+	
+	@Override
+	public List<User> getUserByName(Map map) {
+		List<User> users = this.getSqlSession().selectList("getUserByName");
 		return users;
 	}
 	

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssmweb.xtgl.map">
+
+    <insert id="addMenu" parameterType="java.util.Map">
+        INSERT INTO model_menu (menu_name,menu_jc,menu_url,yx_bz,xy_bz,czy_dm,cz_sj,cd_dj,sjcd_id)
+        VALUES( 
+		 	#{menu_name,jdbcType=VARCHAR},
+            #{menu_jc,jdbcType=VARCHAR},
+            #{menu_url,jdbcType=VARCHAR},
+            #{yx_bz,jdbcType=VARCHAR},
+            #{xy_bz,jdbcType=VARCHAR},
+            '10000',
+            SYSDATE(),
+            #{cd_dj,jdbcType=VARCHAR},
+            #{sjcd_dj,jdbcType=VARCHAR}
+          )
+    </insert>
+    
+</mapper>

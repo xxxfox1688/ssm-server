@@ -11,7 +11,6 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 2 | General Form Elements</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -55,6 +54,7 @@
 <script src="<%=basePath%>skin/dist/js/demo.js"></script>
 <script src="<%=basePath%>ssmweb/xtgl/cdgl.js" charset="utf-8" type="text/javascript"></script>
 <script src="<%=basePath%>ssmweb/common/tsk.js" charset="utf-8" type="text/javascript"></script>
+<script src="<%=basePath%>skin/bootstrap-treeview-dist/bootstrap-treeview.js"></script>
 <title>菜单管理</title>
 </head>
 <body>
@@ -65,8 +65,14 @@
 	</section>
 
 	<section class="content">
+	<div class="col-md-6" style="width: 20%;">
+		<div class="box box-info">
+		<div id="tree"></div>
+		</div>
+	</div>
+	<div class="col-md-6" style="width: 80%;">
 	<div class="box box-default">
-		<form role="form">
+		<form role="form" id="cdgl_form">
 
 			<div class="box-body">
 				<div class="form-group">
@@ -124,7 +130,7 @@
 					<label for="cd_dj" class="col-sm-2 control-label">菜单等级</label>
 					<div class="col-sm-10">
 						<select id="cd_dj" name="cd_dj" class="form-control select2"
-							style="width: 100%;">
+							style="width: 100%;" onchange="cd_dj_check()">
 							<option selected="selected" value="">---请选择---</option>
 							<option value="1">一级菜单</option>
 							<option value="2" onclick="">二级菜单</option>
@@ -132,7 +138,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="box-body">
+			<div class="box-body" id="sjcd_dj_div" style="display: none;">
 				<div class="form-group">
 					<label for="sjcd_dj" class="col-sm-2 control-label">上级菜单</label>
 					<div class="col-sm-10">
@@ -144,10 +150,11 @@
 				</div>
 			</div>
 			<div class="box-footer with-border" align="center">
-				<button type="button" class="btn btn-primary" onclick="tj()">提交</button>
+				<button type="button" class="btn btn-primary" onclick="addMenu()">提交</button>
 				<button type="reset" class="btn btn-default" style="margin-left:30px;">重置</button>
 			</div>
 		</form>
+	</div>
 	</div>
 	</section>
 </body>
