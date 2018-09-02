@@ -3,5 +3,5 @@
   <session-descriptor></session-descriptor>
   <jsp-descriptor></jsp-descriptor>
   <container-descriptor></container-descriptor>
-  <context-root>/ssm</context-root>
+  <context-root>ssm</context-root>
 </weblogic-web-app>

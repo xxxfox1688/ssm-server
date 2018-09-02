@@ -31,7 +31,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements IUserDao {
 	
 	@Override
 	public List<User> getUserByName(Map map) {
-		List<User> users = this.getSqlSession().selectList("getUserByName");
+		List<User> users = this.getSqlSession().selectList("getUserByName",map);
 		return users;
 	}
 	

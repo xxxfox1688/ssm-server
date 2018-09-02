@@ -43,6 +43,7 @@
 <!-- iCheck -->
 <script src="<%=basePath%>skin/plugins/iCheck/icheck.min.js"></script>
 <script src="<%=basePath%>ssmweb/login/login.js"></script>
+<script src="<%=basePath%>ssmweb/common/md5.js"></script>
 
 </head>
 <body class="hold-transition login-page">

@@ -7,7 +7,7 @@
     <module-descriptor external="true">
       <root-element>weblogic-web-app</root-element>
       <uri>WEB-INF/weblogic.xml</uri>
-      <hash-code>1531916292617</hash-code>
+      <hash-code>1533030088530</hash-code>
     </module-descriptor>
     <module-descriptor external="false">
       <root-element>web-app</root-element>
@@ -18,5 +18,5 @@
       <uri>META-INF/weblogic-diagnostics.xml</uri>
     </module-descriptor>
   </module-override>
-  <config-root>D:\workspace\ssm-server\plan</config-root>
+  <config-root>E:\workspace\ssm-server\plan</config-root>
 </deployment-plan>
